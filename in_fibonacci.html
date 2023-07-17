@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+</body>
+<script>
+  let n = +prompt("Nhập vào số lượng số fibonacci đầu tiên muốn hiển thị:");
+  if (n<3) {
+    switch (n) {
+      case 1:
+        document.write("1");
+        break;
+      case 2:
+        document.write("1, 1");
+        break;
+    }
+  } else {
+    let a = 1;
+    let b = 1;
+    document.write(a + ", ");
+    document.write(b);
+    for (let i = 1; i<=(n-2); i++) {
+      c = b + a;
+      document.write(", " + c);
+      a = b;
+      b = c;
+    }
+  }
+</script>
+</html>

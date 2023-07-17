@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhietdo</title>
+</head>
+<body>
+</body>
+<script>
+  let a = +prompt("Nhập nhiệt độ hiện tại:");
+  while(a>100||a<20) {
+      if (a>100) {
+          alert("Giảm nhiệt độ!");
+          a = +prompt("Nhập lại:");
+      } else if (a<20) {
+          alert("Tăng nhiệt độ");
+          a = +prompt("Nhập lại:");
+      }
+  }
+  document.write("Nhiệt độ hợp mẹ lý luôn: " + a);
+</script>
+</html>

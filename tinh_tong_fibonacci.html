@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+</body>
+<script>
+  let n = +prompt("Nhập vào số lượng số fibonacci đầu tiên muốn tính tổng:");
+  if (n<3) {
+    switch (n) {
+      case 1:
+        sum = 1;
+        break;
+      case 2:
+        sum = 2;
+        break;
+    }
+  } else {
+    let a = 1;
+    let b = 1;
+    sum = a+b;
+    for (let i = 1; i<=(n-2); i++) {
+      c = b + a;
+      sum = sum + c;
+      a = b;
+      b = c;
+    }
+  }
+  document.write("Tổng của " + n + " số fibonacci đầu tiên là: " + sum);
+</script>
+</html>

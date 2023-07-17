@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<button onclick="doan()">BẮT ĐẦU</button>
+</body>
+<script>
+  function doan() {
+    let min = parseInt(prompt("Nhập vào giá trị nhỏ trong khoảng:"));
+    let max = parseInt(prompt("Nhập vào giá trị lớn trong khoảng:"));
+    let r = Math.floor((Math.random()*max)+min);
+    for (let i=1;i<=3;i++) {
+      let u = parseInt(prompt("Đoán số lần thứ " + i));
+      if (u>r) {
+        alert("Bạn đoán lớn quá");
+      } else if (u<r) {
+          alert("Bạn đoán nhỏ quá");
+      } else {
+        alert("Bạn đoán đúng!");
+        break;
+      }
+      if (i===3) {
+          alert("Hết lượt, nhấn nút BẮT ĐẦU để chơi lại");
+    }
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bang_cuu_chuong</title>
+</head>
+<body>
+<h1 style="text-align: center">BẢNG CỬU CHƯƠNG</h1>
+</body>
+<script>
+    let a = "<table style='text-align: center;border-collapse: collapse;border: red solid 1px;width: 100%'>";
+    let i,j;
+    i = 1;
+    j = 2;
+    while (i<=9) {
+        a = a + "<tr>";
+        while (j<=9) {
+            a = a + "<td style='border-collapse: collapse;border: red solid 1px'>" + j + "x" + i + "=" + eval(i*j) +"</td>";
+            j++;
+        }
+        j = 2;
+        i++;
+    }
+    a = a + "</tr>"
+    document.write(a);
+</script>
+</html>
